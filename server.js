@@ -32,3 +32,7 @@ db.sequelize.sync().then(function () {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
